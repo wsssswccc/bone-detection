@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding: 0;
+}
+#chart{
+    width: 500px;
+	height: 500px;
+	margin-top: 20px;
+	margin-left: 20px;
+	float: left;
+}
+.advise{
+	width: 100%;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 18px;
+}
+.guide{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.items{
+	margin-left: 20px;
+	margin-top: 40px;
+}
+.result{
+	width: 400px;
+	height: 500px;
+	margin-top: 20px;
+	margin-left: 20px;
+	float: left;
+	margin-left: 200px;
+}

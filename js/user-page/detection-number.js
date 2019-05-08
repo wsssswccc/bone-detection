@@ -17,7 +17,7 @@ require(
                 show: true
             },
             legend: {
-                data: ['骨质质量']
+                data: ['访问次数']
             },
             xAxis: [{
                 type: 'category',
@@ -27,9 +27,9 @@ require(
                 type: 'value'
             }],
             series: [{
-                "name": "骨质质量",
+                "name": "访问次数",
                 "type": "line",
-                "data": [0.3, 0.5, 0.7, 0.7, 0.6, 0.5,0.7,0.88,0.9,0.78,0.93,0.89]
+                "data": [5, 20, 40, 10, 10, 20,20,10,45,32,12,5]
             }]
         };
 
@@ -37,19 +37,3 @@ require(
         myChart.setOption(option);
     }
 );
-let responseData;
-function getData() {
-    let responseData;
-    fetch('https://www.easy-mock.com/mock/5c5414c1deae1e58bc943374/BnoeDetection/history-detection-result#!method=get')
-        .then(function (response) {
-            return response.json();
-        },function(){
-        	
-        })
-        .then(function (myJson) {
-            responseData = myJson;
-            console.log(responseData);
-        });
-};
-getData();
-

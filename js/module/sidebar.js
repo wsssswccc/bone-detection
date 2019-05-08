@@ -23,11 +23,11 @@ let child = document.getElementsByClassName('child');
 let list = document.getElementsByClassName("nav")[0].children;
 let nav = document.getElementsByClassName("nav")[0];
 //记录切换图片的状态
-let status = "PLUS";
+let imgStatus = "PLUS";
 cutover.addEventListener("click",function(){
-    if (status == "PLUS") {
+    if (imgStatus == "PLUS") {
         cutover.src = '../../resource/img/minus.png';
-        status = "MINUS";
+        imgStatus = "MINUS";
         child[0].style.visibility = 'visible';
         child[1].style.visibility = 'visible';
         child[2].style.visibility = 'visible';
@@ -35,7 +35,7 @@ cutover.addEventListener("click",function(){
         setPage();
     } else {
         cutover.src = '../../resource/img/plus.png';
-        status = "PLUS";
+        imgStatus = "PLUS";
         child[0].style.visibility = 'hidden';
         child[1].style.visibility = 'hidden';
         child[2].style.visibility = 'hidden';

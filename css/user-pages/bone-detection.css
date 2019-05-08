@@ -2,3 +2,48 @@
     margin:0;
     padding:0;
 }
+form{
+	width: 500px;
+	height:600px;
+	margin: auto;
+}
+.wrapper{
+    margin-left: 90px;
+    margin-top: 20px;
+}
+.guide{
+	font-size: 25px;
+	margin-top: 30px;
+	margin-left: 50px;
+}
+.wrapper>div:nth-child(1){
+    float: left;
+    width: 180px;
+}
+.wrapper>div:nth-child(2){
+    width: 320px;
+}
+.check{
+    width: 40px!important;
+}
+.wrapper>div:nth-child(2)>input{
+    border-radius: 3px;
+	border: 1px solid #2a82e4;
+	width: 120px;
+}
+.submit{
+	background-color: grey;
+    border-radius: 10px;
+    outline: none;
+    color: white;
+    border: none;
+    width: 238px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    margin-left: 40px;
+}
+.submit:hover{
+	cursor: pointer;
+}

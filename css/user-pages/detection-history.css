@@ -2,3 +2,24 @@
     margin:0;
     padding:0;
 }
+#chart{
+	width: 900px;
+    height: 300px;
+    margin: 0 auto;
+}
+table{
+	margin: auto;
+}
+td{
+	text-align: center;
+}
+.details{
+	background-color: #2a82e4;
+	width: 80px;
+	color: white;
+	font-size: 14px;
+	border-radius: 10px;
+}
+.details:hover{
+	cursor: pointer;
+}

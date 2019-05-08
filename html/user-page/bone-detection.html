@@ -8,17 +8,65 @@
     <title>骨质检测</title>
 </head>
 <body>
-
     <header></header>
     <!-- 侧栏 -->
     <section class="sidebar">
-       <script src="../../js/module/sidebar.js"></script>
+        <script src="../../js/module/sidebar.js"></script>
     </section>
     <!-- 主题 -->
     <section class="main">
         <div class="title">骨质质量专家检测</div>
         <br>
-        <hr width="100%" color=#3949ab SIZE=3>
+        <hr width="99.8%" color=#3949ab SIZE=3>
+        <div class="guide">请输入骨质数据:</div>
+        <form action="detection-result.html" class="form" onsubmit="return decide()">
+            <div class="wrapper">
+                <div>性别：</div>
+                <div><input type="radio" value="woman" name="sex" checked="" class="check">男<input type="radio" value="man"
+                        name="sex" class="check">女 *</div>
+            </div>
+            <div class="wrapper">
+                <div>年龄：</div>
+                <div><input type="number" required="required" min="0" max="120"> *</div>
+            </div>
+            <div class="wrapper">
+                <div>身高(CM)：</div>
+                <div><input type="number" required="required" min="20" max="240"> *</div>
+            </div>
+            <div class="wrapper">
+                <div>体重(KG)：</div>
+                <div><input type="number" required="required" min="10" max="300"> *</div>
+            </div>
+            <div class="wrapper">
+                <div>血红单白含量：</div>
+                <div><input type="number"></div>
+            </div>
+            <div class="wrapper">
+                <div>磷含量：</div>
+                <div><input type="number"></div>
+            </div>
+            <div class="wrapper">
+                <div>钙含量：</div>
+                <div><input type="number"></div>
+            </div>
+            <div class="wrapper">
+                <div>碱性磷酸酶含量：</div>
+                <div><input type="number"></div>
+            </div>
+            <div class="wrapper">
+                <div>淋巴细胞含量：</div>
+                <div><input type="number"></div>
+            </div>
+            <div class="wrapper">
+                <div>血红单白含量：</div>
+                <div><input type="number"></div>
+            </div>
+            <div class="wrapper">
+                <input type="submit" value="开始检测" class="submit">
+            </div>
+        </form>
     </section>
+    <script src="../../js/user-page/bone-detection.js"></script>
 </body>
+
 </html>
