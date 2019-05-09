@@ -27,19 +27,17 @@ let imgStatus = "PLUS";
 cutover.addEventListener("click",function(){
     if (imgStatus == "PLUS") {
         cutover.src = '../../resource/img/minus.png';
-        imgStatus = "MINUS";
-        child[0].style.visibility = 'visible';
-        child[1].style.visibility = 'visible';
-        child[2].style.visibility = 'visible';
-        child[3].style.visibility = 'visible';
+        imgStatus = "MINUS";     
+        Array.prototype.forEach.call(child,(element)=>{
+            element.style.visibility = 'visible';
+        });
         setPage();
     } else {
         cutover.src = '../../resource/img/plus.png';
         imgStatus = "PLUS";
-        child[0].style.visibility = 'hidden';
-        child[1].style.visibility = 'hidden';
-        child[2].style.visibility = 'hidden';
-        child[3].style.visibility = 'hidden';
+        Array.prototype.forEach.call(child,(element)=>{
+            element.style.visibility = 'hidden';
+        });
     }
 },false);
 list[0].addEventListener("click",function(){
