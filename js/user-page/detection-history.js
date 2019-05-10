@@ -1,3 +1,26 @@
+function getData(url, data) {
+    return fetch(url)
+        .then(
+            (response) => {
+                if (!response.ok) { 
+                    handleError(response);
+                    return 0;
+                };
+                return response.json();
+            },
+            () => { 
+                alert('网络错误！');
+            }
+        )
+}
+getData('https://www.easy-mock.com/mock/5c5414c1deae1e58bc943374/BnoeDetection/history-detection-result#!method=get')
+    .then(data => console.log(data))
+    .catch(error => {throw new Error(error)});
+
+function handleError(response){
+    console.log(response);
+}
+
 require.config({
     paths: {
         echarts: '../../js/lib/dist'
@@ -8,7 +31,7 @@ require(
         'echarts',
         'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
     ],
-    function(ec) {
+    function (ec) {
         // 基于准备好的dom，初始化echarts图表
         var myChart = ec.init(document.getElementById('chart'));
 
@@ -21,7 +44,7 @@ require(
             },
             xAxis: [{
                 type: 'category',
-                data: ["1月", "2月", "3月", "4月", "5月", "6月","7月", "8月", "9月", "10月", "11月", "12月"]
+                data: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
             }],
             yAxis: [{
                 type: 'value'
@@ -29,7 +52,7 @@ require(
             series: [{
                 "name": "骨质质量",
                 "type": "line",
-                "data": [0.3, 0.5, 0.7, 0.7, 0.6, 0.5,0.7,0.88,0.9,0.78,0.93,0.89]
+                "data": [0.3, 0.5, 0.7, 0.7, 0.6, 0.5, 0.7, 0.88, 0.9, 0.78, 0.93, 0.89]
             }]
         };
 
@@ -38,18 +61,6 @@ require(
     }
 );
 let responseData;
-function getData() {
-    let responseData;
-    fetch('https://www.easy-mock.com/mock/5c5414c1deae1e58bc943374/BnoeDetection/history-detection-result#!method=get')
-        .then(function (response) {
-            return response.json();
-        },function(){
-        	
-        })
-        .then(function (myJson) {
-            responseData = myJson;
-            console.log(responseData);
-        });
-};
-getData();
+
+
 
