@@ -1,6 +1,4 @@
-
-
-
+//import{getData,handleError,handleData}from 'ajax.js';
 
 require.config({
     paths: {

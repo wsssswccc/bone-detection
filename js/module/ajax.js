@@ -1,3 +1,4 @@
+export {getData,handleError,handleData};
 function getData(url, data) {
     return fetch(url, data)
         .then(
@@ -20,8 +21,6 @@ function getData(url, data) {
             }
         )
 }
-getData('https://www.easy-mock.com/mock/5c5414c1deae1e58bc943374/BnoeDetection/history-detection-result#!method=get')
-    .then(data => {handleData(data)}, error => { handleError(error)})
 //处理响应异常的函数   
 function handleError(error) {
     //do something to handle error
