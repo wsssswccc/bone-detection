@@ -1,8 +1,3 @@
-import{getData,handleError,handleData}from '../module/ajax';
-//getData('https://www.easy-mock.com/mock/5c5414c1deae1e58bc943374/BnoeDetection/history-detection-time#!method=get')
- //       .then(data => {handleData(data)});
-
-//console.log(getData);
 let input = document.getElementsByTagName('input');
 let submit = document.getElementsByClassName('submit')[0];
 for (let i = 0; i < 11; i++) {

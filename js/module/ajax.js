@@ -1,4 +1,3 @@
-export {getData,handleError,handleData};
 function getData(url, data) {
     return fetch(url, data)
         .then(
@@ -26,7 +25,4 @@ function handleError(error) {
     //do something to handle error
     console.log(error);
 }
-function handleData(data){
-    //do something to handle data
-    console.log(data);
-}
+
