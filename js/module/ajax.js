@@ -13,7 +13,10 @@ function getData(url, data) {
                 }
             },
             //如果响应失败，成为rejected状态
-            () => {
+            (response) => {
+                alert(response);
+                alert(url);
+                alert(1);
                 const error = new Error('网络错误');
                 alert('网络错误！');
                 throw error;
@@ -25,4 +28,3 @@ function handleError(error) {
     //do something to handle error
     console.log(error);
 }
-

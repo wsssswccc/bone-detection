@@ -1,3 +1,4 @@
+//get: /predict_count
 getData('https://www.easy-mock.com/mock/5c5414c1deae1e58bc943374/BnoeDetection/history-detection-time#!method=get')
     .then(draft, error => handleError(error));
 function draft(response) {
@@ -42,7 +43,7 @@ function draft(response) {
                     type: 'value'
                 }],
                 series: [{
-                    "name": "访问次数",
+                    "name": "预测次数",
                     "type": "line",
                     "data": historyTimes
                 }]

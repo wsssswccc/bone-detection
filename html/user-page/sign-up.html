@@ -8,27 +8,28 @@
 <body>
     <section class="content">
         <div class="header">BoneDetection</div>
-        <form action="bone-detection.html" method="POST">
+        <!-- 198.168/registe -->
+        <form action="#" method="POST" class="form" onsubmit="postData('www.easy-mock.com/mock/5c5414c1deae1e58bc943374/BnoeDetection/history-detection-result#!method=get')">
             <div class="wrapper">
-                <div class="word">用户名</div><input type="text" placeholder="请输入用户名">
+                <div class="word">用户名</div><input type="text" placeholder="请输入用户名" required class="username">
             </div>
             <div class="wrapper">
-                <div class="word">手机号</div><input type="text" placeholder="请输入手机号">
+                <div class="word">手机号</div><input type="text" pattern="^1[3-9]\d{9}$" placeholder="请输入手机号" required class="phone">
             </div>
             <div class="wrapper">
-                    <div class="word">邮箱</div><input type="text" placeholder="请输入邮箱">
+                    <div class="word">邮箱</div><input type="eamil" pattern=^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$ placeholder="请输入邮箱" required class="email"> 
                 </div>
             <div class="wrapper">
-                <div class="word">密码</div><input type="password" placeholder="请输入密码">
+                <div class="word">密码</div><input type="password" placeholder="请输入密码" required class="password">
             </div>
             <div class="wrapper">
-                    <div class="word">确认密码</div><input type="password" placeholder="请输入确认密码">
+                    <div class="word">确认密码</div><input type="password" placeholder="请输入确认密码" required class="confirm-password">
             </div>
             <div class="wrapper">
-                <div class="word">验证码</div><input type="text" placeholder="请输入图形验证码" class="verification">
+                <div class="word">验证码</div><input type="text" placeholder="请输入图形验证码" class="verification" required>
             </div>
             <div class="wrapper">
-                <img src="../../resource/img/Verification.jpg" alt="">
+                <img  alt="" class="verify">
             </div>
             <div class="wrapper">
                 <input type="submit" value="注册" class="submit">
@@ -36,5 +37,7 @@
         </form>
         <div class="register" onclick="window.open('login.html')">跳转到登录页面</div>
     </section>
+    <script src="../../js/module/ajax.js"></script>
+    <script src="../../js/module/form-validation.js"></script>
 </body>
 </html>
