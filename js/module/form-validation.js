@@ -18,18 +18,10 @@ let input = document.getElementsByTagName('input');
 let submit = document.getElementsByClassName('submit')[0];
 //用于记录表单验证的状态
 let status = 'FALSE';
-/* 加载验证码图片 */
-// function loadVerifyImg() {
-//     //255.255/verify_code
-//     getData('http://192.168.43.136:5000/verify_code')
-//         .then(draft, error => handleError(error));
-// }
-// loadVerifyImg();
-// function draft(url) {
-//     verifyImg.src = url.data;
-// }
-/*点击鼠标切换验证码*/
-// verifyImg.addEventListener('click', loadVerifyImg, false);
+/* 鼠标点击加载验证码 */
+verifyImg.addEventListener('click', function (){
+    verifyImg.src='http://192.168.43.136:5000/verify_code';
+}, false);
 /*鼠标失去焦点验证表单（功能尚未实现 2019.5.14）*/
 // for (let i = 0; i < input.length; i++) {
 //     (function () {
@@ -50,10 +42,9 @@ let status = 'FALSE';
 // }
 
 /* 提交表单信息 */
-submit.onclick=function(){
-    postData();
-}
+submit.addEventListener('click',postData,false);
 function postData() {
+    //判断当前页面是注册页面和登录页面
     if (!confirmPassword) {
         var data = {
             phone_number: input[0].value,
@@ -76,30 +67,14 @@ function postData() {
         mode: 'cors',
         credentials: 'include',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: JSON.stringify(data)
     })
         .then((response) => {
             console.log(response.msg);
             if (response.msg =='登录成功') {
-                alert('登录成功');
                 window.location.href = "bone-detection.html";
             }
         }, error => handleError(error));
 }
-
-
-// ,{
-//     body: JSON.stringify(data), // must match 'Content-Type' header
-//     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-//     credentials: 'same-origin', // include, same-origin, *omit
-//     headers: {
-//       'user-agent': 'Mozilla/4.0 MDN Example',
-//       'content-type': 'application/json'
-//     },
-//     method: 'POST', // *GET, POST, PUT, DELETE, etc.
-//     mode: 'cors', // no-cors, cors, *same-origin
-//     redirect: 'follow', // manual, *follow, error
-//     referrer: 'no-referrer', // *client, no-referrer
-//   }
