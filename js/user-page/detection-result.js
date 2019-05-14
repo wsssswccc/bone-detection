@@ -1,4 +1,4 @@
-getData('http://192.168.43.136/detection-result#!method=get')
+getData('https://easy-mock.com/mock/5c5414c1deae1e58bc943374/BnoeDetection/detection-result')
     .then(draft, error => handleError(error));
 //绘图的回调函数
 function draft(response) {

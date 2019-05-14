@@ -1,5 +1,5 @@
 //255.255/his_bone_quality
-getData('https://www.easy-mock.com/mock/5c5414c1deae1e58bc943374/BnoeDetection/history-detection-result#!method=get')
+getData('https://easy-mock.com/mock/5c5414c1deae1e58bc943374/BnoeDetection/history-detection-result')
     .then(draft);
 //绘图的回调函数
 function draft(response) {
