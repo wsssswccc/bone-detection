@@ -3,6 +3,7 @@ function getData(url, data) {
         .then(
             //如果响应成功，成为resolveed状态
             response => {
+                console.log(data);
                 //判断响应是否返回成功的状态码
                 if (!response.ok) {
                     const error = new Error(`请求失败! 状态码: ${response.status}, 失败信息: ${response.statusText}`);
@@ -15,10 +16,9 @@ function getData(url, data) {
             //如果响应失败，成为rejected状态
             (response) => {
                 alert(response);
-                alert(url);
-                alert(1);
-                const error = new Error('网络错误');
                 alert('网络错误！');
+                debugger;
+                const error = new Error('网络错误');
                 throw error;
             }
         )

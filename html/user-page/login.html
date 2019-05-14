@@ -8,7 +8,7 @@
     <section class="content">
         <div class="header">BoneDetection</div>
         <!-- 198.168/login -->
-        <form action="" method="POST" class="form">
+        <form action="" method="POST" class="form" onsubmit='return false'>
             <div class="wrapper">
                 <div class="word">手机号</div><input type="text" pattern="^1[3-9]\d{9}$" placeholder="请输入手机号" class="phone">
             </div>
@@ -19,7 +19,7 @@
                 <div class="word">验证码</div><input type="text" placeholder="请输入图形验证码" class="verification">
             </div>
             <div class="wrapper">
-                <img  alt="" class="verify">
+                <img  alt="" src='http://192.168.43.136:5000/verify_code' class="verify">
             </div>
             <div class="wrapper">
                 <input type="submit" value="登录" class="submit">
