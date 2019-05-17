@@ -17,7 +17,7 @@
 	list-style-type:none;
 }
 .nav>li{
-	width: 70%;
+	width: 75%;
 	height: 30px;
 	color: white;
 	font-size: 15px;
@@ -26,8 +26,8 @@
 	margin-top: 10px;
 }
 .nav>li:nth-child(1):hover,
+.nav>li:nth-child(2):hover,
 .nav>li:nth-child(3):hover,
-.nav>li:nth-child(4):hover,
 .nav>li:nth-child(5):hover,
 .nav>li:nth-child(6):hover{
     cursor: pointer;

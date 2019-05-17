@@ -1,0 +1,86 @@
+<!-- 医生修改建议的页面 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/module/doc_sidebar.css">
+    <link rel="stylesheet" href="../../css/doctor-page/modify_suggestion.css">
+    <title>修改建议</title>
+</head>
+<body>
+    <header></header>
+    <!-- 侧栏 -->
+    <section class="sidebar">
+        <script src="../../js/module/doc_sidebar.js"></script>
+    </section>
+    <!-- 主题 -->
+    <section class="main">
+        <div class="title">修改建议</div>
+        <br>
+        <hr width="99.8%" color=#3949ab SIZE=3>
+        <table class="suggestion">
+            <tr height="20%">
+                <th width="20%">级别</th>
+                <th width="20%">区间范围</th>
+                <th width="50%">建议编辑区</th>
+                <th width="10px">提交修改</th>
+            </tr>
+            <tr>
+                <td>轻微级别</td>
+                <td>
+                    <input type="text" name="" class="limit">~
+                    <input type="text" name="" class="limit">
+                </td>
+                <td>
+                    <textarea class="advice"></textarea>
+                </td>
+                <td>
+                    <button onclick="Submit()">提交</button>
+                </td>
+            </tr>
+            <tr>
+                <td>中等级别</td>
+                <td>
+                    <input type="text" name="" class="limit">~
+                    <input type="text" name="" class="limit">
+                </td>
+                <td>
+                    <textarea class="advice"></textarea>
+                </td>
+                <td>
+                    <button onclick="Submit()">提交</button>
+                </td>
+            </tr>
+            <tr>
+                <td>重度级别</td>
+                <td>
+                    <input type="text" name="" class="limit">~
+                    <input type="text" name="" class="limit">
+                </td>
+                <td>
+                    <textarea class="advice"></textarea>
+                </td>
+                <td>
+                    <button onclick="Submit()">提交</button>
+                </td>
+            </tr>
+            <tr>
+                <td>危险级别</td>
+                <td>
+                    <input type="text" name="" class="limit">~
+                    <input type="text" name="" class="limit">
+                </td>
+                <td>
+                    <textarea class="advice"></textarea>
+                </td>
+                <td>
+                    <button onclick="Submit()">提交</button>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <script src="../../js/module/ajax.js"></script>
+    <script src="../../js/doctor-page/modify_suggestion.js"></script>
+</body>
+
+</html>

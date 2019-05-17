@@ -1,0 +1,36 @@
+<!-- 系统使用信息页面 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/module/doc_sidebar.css">
+    <!-- <link rel="stylesheet" href="../../css/module/layui.css"> -->
+    <link rel="stylesheet" href="../../css/doctor-page/system_use.css">
+    <title>系统使用信息</title>
+</head>
+<body>
+    <header></header>
+    <!-- 侧栏 -->
+    <section class="sidebar">
+        <script src="../../js/module/doc_sidebar.js"></script>
+    </section>
+    <!-- 主题 -->
+    <section class="main">
+        <div class="title">系统使用信息</div>
+        <br>
+        <hr width="99.8%" color=#3949ab SIZE=3>
+        <!-- <i class="layui-icon-rate-solid" style="font-size: 50px; color: #1E9FFF;"></i> -->
+        <div id="chart"></div>
+        <div class="times">
+            <div class="totalTime">近一年内总调用次数为</div>
+            <div class="totalTime">近一年内总预测次数为</div>
+            <div class="totalTime">近一年内总登录次数为</div>
+        </div>       
+    </section>
+    <script src="../../js/module/ajax.js"></script>
+    <!-- <script src="../../js/module/layui.js"></script> -->
+    <script src="../../js/lib/dist/echarts.js"></script>
+    <script src="../../js/doctor-page/system_use.js"></script>
+</body>
+
+</html>

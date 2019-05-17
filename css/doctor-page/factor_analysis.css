@@ -1,0 +1,19 @@
+*{
+    margin:0;
+    padding: 0;
+}
+#chart{
+    width: 85%;
+	height: 550px;
+	margin-top: 50px;
+	margin-left: 7%;
+	float: left;
+}
+
+/*.guide{
+    margin-left: 20px;
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+*/
